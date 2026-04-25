@@ -366,6 +366,36 @@
             min-height: 120px;
         }
 
+        .checkbox-group {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.5rem;
+            cursor: pointer;
+        }
+
+        .checkbox-group a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
         .form-submit {
             background-color: #e74c3c;
             color: white;
@@ -379,15 +409,20 @@
             width: 100%;
         }
 
-        .form-submit:hover {
+        .form-submit:hover:not(:disabled) {
             background-color: #c0392b;
+        }
+
+        .form-submit:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+            opacity: 0.7;
         }
 
         /* Footer */
         footer {
             background: #2c3e50;
             color: white;
-            text-align: center;
             padding: 2rem;
             margin-top: 3rem;
         }
@@ -395,6 +430,15 @@
         footer p {
             margin: 0.5rem 0;
             font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -452,7 +496,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('images/hero.jpg');">
+    <section class="hero" style="background-image: url('images/Manslagt-Ferienhaus_230603-0005.JPG');">
         <div class="hero-content">
             <h1>Up de Warft</h1>
             <p>Ankommen, durchatmen, wohlfühlen – Ihre Ferienwohnung in einem historischen Gulfhof an der Nordseeküste</p>
@@ -490,28 +534,88 @@
             
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="images/wohnzimmer.jpg" alt="Wohnzimmer">
-                    <div class="gallery-label">Wohnzimmer</div>
+                    <img src="images/Manslagt-Ferienhaus_230603-0001.JPG" alt="Eingang">
+                    <div class="gallery-label">Eingang</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/schlafzimmer1.jpg" alt="Schlafzimmer 1">
-                    <div class="gallery-label">Schlafzimmer 1</div>
+                    <img src="images/Manslagt-Ferienhaus_230603-0005.JPG" alt="Hausansicht vorne 1">
+                    <div class="gallery-label">Hausansicht vorne 1</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/schlafzimmer2.jpg" alt="Schlafzimmer 2">
-                    <div class="gallery-label">Schlafzimmer 2</div>
+                    <img src="images/Manslagt-Ferienhaus_230603-0007.JPG" alt="Hausansicht vorne 2">
+                    <div class="gallery-label">Hausansicht vorne 2</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/kueche.jpg" alt="Küche">
-                    <div class="gallery-label">Küche</div>
+                    <img src="images/Manslagt-Ferienhaus_230603-0011.JPG" alt="Wohnzimmer 1">
+                    <div class="gallery-label">Wohnzimmer 1</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/badezimmer.jpg" alt="Badezimmer">
-                    <div class="gallery-label">Badezimmer</div>
+                    <img src="images/Manslagt-Ferienhaus_230603-0015.JPG" alt="Wohnzimmer 2">
+                    <div class="gallery-label">Wohnzimmer 2</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/terrasse.jpg" alt="Terrasse & Garten">
-                    <div class="gallery-label">Terrasse & Garten</div>
+                    <img src="images/Manslagt-Ferienhaus_230603-0019.JPG" alt="Essbereich">
+                    <div class="gallery-label">Essbereich</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0023.JPG" alt="Treppenaufgang">
+                    <div class="gallery-label">Treppenaufgang</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0031.JPG" alt="Flur 1">
+                    <div class="gallery-label">Flur 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0037.JPG" alt="Flur 2">
+                    <div class="gallery-label">Flur 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0039.JPG" alt="Küche 1">
+                    <div class="gallery-label">Küche 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0041.JPG" alt="Küche 2">
+                    <div class="gallery-label">Küche 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0047.JPG" alt="Wohnzimmer 3">
+                    <div class="gallery-label">Wohnzimmer 3</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0061.JPG" alt="kl. Schlafzimmer">
+                    <div class="gallery-label">kl. Schlafzimmer</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0063.JPG" alt="Badezimmer 1">
+                    <div class="gallery-label">Badezimmer 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0067.JPG" alt="Badezimmer 2">
+                    <div class="gallery-label">Badezimmer 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0069.JPG" alt="gr. Schlafzimmer 1">
+                    <div class="gallery-label">gr. Schlafzimmer 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0075.JPG" alt="gr. Schlafzimmer 2">
+                    <div class="gallery-label">gr. Schlafzimmer 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0087.JPG" alt="Hausansicht hinten 1">
+                    <div class="gallery-label">Hausansicht hinten 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0089.JPG" alt="Hausansicht hinten 2">
+                    <div class="gallery-label">Hausansicht hinten 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0095.JPG" alt="Terrasse 1">
+                    <div class="gallery-label">Terrasse 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Manslagt-Ferienhaus_230603-0101.JPG" alt="Terrasse 2">
+                    <div class="gallery-label">Terrasse 2</div>
                 </div>
             </div>
         </section>
@@ -674,20 +778,24 @@
                 <div class="card">
                     <h3>📧 Email</h3>
                     <p>
-                        <a href="mailto:alexanderjender@gmail.com" style="color: #e74c3c; text-decoration: none;">
-                            alexanderjender@gmail.com
+                        <a href="mailto:booking@jender-fewo.de" style="color: #e74c3c; text-decoration: none;">
+                            booking@jender-fewo.de
                         </a>
                     </p>
                     <p style="font-size: 0.9rem; margin-top: 1rem;">Antwort innerhalb von 24 Stunden</p>
                 </div>
                 <div class="card">
-                    <h3>🏠 Vermieter</h3>
-                    <p><strong>Maria Jender</strong></p>
-                    <p style="font-size: 0.9rem; margin-top: 1rem;">Up de Warft<br>Manslagt</p>
+                    <h3>☎️ Telefon</h3>
+                    <p>
+                        <a href="tel:04491919262" style="color: #e74c3c; text-decoration: none;">
+                            04491 / 919262
+                        </a>
+                    </p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Maria Jender</p>
                 </div>
             </div>
 
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/xojybaoe" method="POST">
                 <h3 style="text-align: center; margin-bottom: 1.5rem;">Anfrage senden</h3>
                 
                 <div class="form-group">
@@ -725,20 +833,179 @@
                     <textarea id="message" name="message" required placeholder="Ihre Nachricht..."></textarea>
                 </div>
 
-                <button type="submit" class="form-submit">Anfrage senden</button>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="privacy-checkbox" name="privacy" required>
+                        Ich akzeptiere die <a href="#datenschutz" onclick="document.getElementById('datenschutz').scrollIntoView();">Datenschutzerklärung</a> und das <a href="#impressum" onclick="document.getElementById('impressum').scrollIntoView();">Impressum</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="form-submit" id="submit-btn" disabled>Anfrage senden</button>
                 
                 <p style="font-size: 0.85rem; color: #7f8c8d; margin-top: 1rem; text-align: center;">
                     * Pflichtfelder
                 </p>
             </form>
         </section>
+
+        <!-- Impressum -->
+        <section id="impressum">
+            <h2>📋 Impressum</h2>
+            <div class="card">
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <p>
+                    <strong>Maria Jender</strong><br>
+                    Thüler Str. 14<br>
+                    26169 Friesoythe<br>
+                    Deutschland
+                </p>
+                <h4 style="margin-top: 1.5rem;">Kontakt</h4>
+                <p>
+                    Telefon: <a href="tel:04491919262" style="color: #e74c3c;">04491 / 919262</a><br>
+                    E-Mail: <a href="mailto:booking@jender-fewo.de" style="color: #e74c3c;">booking@jender-fewo.de</a>
+                </p>
+                <h4 style="margin-top: 1.5rem;">Haftungsausschluss</h4>
+                <p>
+                    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. 
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. 
+                    Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen 
+                    oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                </p>
+                <h4 style="margin-top: 1.5rem;">Hosting & Technologie</h4>
+                <p>
+                    Diese Website wird gehostet auf <strong>GitHub Pages</strong>, einem kostenlosen Hosting-Service von GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.
+                    Die Website ist statisch und speichert keine Daten auf eigenen Servern. Informationen zu GitHub Pages findest du unter: <a href="https://docs.github.com/de" style="color: #e74c3c;">GitHub Dokumentation</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Datenschutzerklärung -->
+        <section id="datenschutz">
+            <h2>🔒 Datenschutzerklärung</h2>
+            <div class="card">
+                <h3>1. Verantwortlicher für die Datenverarbeitung</h3>
+                <p>
+                    <strong>Maria Jender</strong><br>
+                    Thüler Str. 14, 26169 Friesoythe<br>
+                    Telefon: 04491 / 919262<br>
+                    E-Mail: booking@jender-fewo.de
+                </p>
+
+                <h3 style="margin-top: 2rem;">2. Allgemeine Hinweise zur Datenverarbeitung</h3>
+                <p>
+                    Diese Website ist eine <strong>statische Webseite</strong> ohne automatische Datenerfassung. 
+                    Es werden <strong>keine Cookies</strong> gesetzt und <strong>kein Tracking</strong> durchgeführt.
+                </p>
+
+                <h3 style="margin-top: 2rem;">3. Automatisch erfasste Daten</h3>
+                <p>
+                    Beim Besuch der Website können folgende Daten automatisch erfasst werden:
+                </p>
+                <ul style="margin-left: 2rem;">
+                    <li>IP-Adresse (durch GitHub Pages Server-Logs)</li>
+                    <li>Browser-Typ und Version</li>
+                    <li>Betriebssystem</li>
+                    <li>Zugriffszeitpunkt</li>
+                    <li>Referrer-URL</li>
+                </ul>
+                <p style="margin-top: 1rem;">
+                    Diese Daten werden von GitHub Pages für technische und Sicherheitszwecke verarbeitet. 
+                    Weitere Informationen zur Datenverarbeitung durch GitHub findest du unter: 
+                    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" style="color: #e74c3c;">GitHub Datenschutzerklärung</a>
+                </p>
+
+                <h3 style="margin-top: 2rem;">4. Kontaktformular & Formspree</h3>
+                <p>
+                    Das Kontaktformular auf dieser Website wird von <strong>Formspree</strong> (Spark Wave LLC) verwaltet.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Erfasste Daten:</strong>
+                </p>
+                <ul style="margin-left: 2rem;">
+                    <li>Name</li>
+                    <li>Email-Adresse</li>
+                    <li>Telefonnummer (optional)</li>
+                    <li>Anreisedatum</li>
+                    <li>Abreisedatum</li>
+                    <li>Anzahl Gäste</li>
+                    <li>Nachricht</li>
+                </ul>
+                <p style="margin-top: 1rem;">
+                    <strong>Rechtsgrundlage:</strong> Ihre ausdrückliche Einwilligung durch Ankreuzen der Datenschutz-Checkbox (Art. 6 Abs. 1 Buchst. a DSGVO)
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Zweck:</strong> Verarbeitung von Buchungsanfragen
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Speicherdauer:</strong> Die Daten werden bei Formspree gespeichert bis du sie löschst. 
+                    Weitere Informationen zur Datenverarbeitung durch Formspree findest du unter: 
+                    <a href="https://formspree.io/legal/privacy-policy/" style="color: #e74c3c;">Formspree Datenschutzerklärung</a>
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Empfänger:</strong> Die Daten werden zu Maria Jender unter booking@jender-fewo.de weitergeleitet.
+                </p>
+
+                <h3 style="margin-top: 2rem;">5. Deine Rechte</h3>
+                <p>
+                    Nach der DSGVO hast du folgende Rechte:
+                </p>
+                <ul style="margin-left: 2rem;">
+                    <li><strong>Auskunftspflicht (Art. 15 DSGVO):</strong> Du hast das Recht, Auskunft über die dich betreffenden personenbezogenen Daten zu verlangen.</li>
+                    <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Du hast das Recht, unrichtige personenbezogene Daten berichtigen zu lassen.</li>
+                    <li><strong>Löschung (Art. 17 DSGVO):</strong> Du hast das Recht, deine Daten löschen zu lassen.</li>
+                    <li><strong>Einschränkung (Art. 18 DSGVO):</strong> Du hast das Recht, die Verarbeitung einzuschränken.</li>
+                    <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Du hast das Recht, deine Daten in strukturierter Form zu erhalten.</li>
+                    <li><strong>Widerspruch (Art. 21 DSGVO):</strong> Du hast das Recht, der Verarbeitung zu widersprechen.</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">6. Beschwerderecht</h3>
+                <p>
+                    Solltest du der Ansicht sein, dass die Verarbeitung deiner personenbezogenen Daten gegen die DSGVO verstößt, 
+                    hast du das Recht, bei einer Datenschutzbehörde Beschwerde einzureichen. 
+                    Zuständig ist die Datenschutzbehörde Niedersachsen:
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Niedersächsischer Landesbeauftragte für den Datenschutz</strong><br>
+                    Prinzenstraße 5<br>
+                    30159 Hannover<br>
+                    Telefon: 0511 120-4500<br>
+                    E-Mail: <a href="mailto:poststelle@lfd.niedersachsen.de" style="color: #e74c3c;">poststelle@lfd.niedersachsen.de</a>
+                </p>
+
+                <h3 style="margin-top: 2rem;">7. Kontakt für Datenschutzfragen</h3>
+                <p>
+                    Bei Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung deiner Daten kontaktiere uns bitte unter:
+                </p>
+                <p style="margin-top: 1rem;">
+                    E-Mail: <a href="mailto:booking@jender-fewo.de" style="color: #e74c3c;">booking@jender-fewo.de</a><br>
+                    Telefon: 04491 / 919262
+                </p>
+
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #7f8c8d;">
+                    <strong>Letzte Aktualisierung:</strong> April 2026
+                </p>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
     <footer>
         <p><strong>Up de Warft</strong> – Ferienwohnung in Manslagt</p>
-        <p>Maria Jender | alexanderjender@gmail.com</p>
+        <p>Maria Jender | <a href="mailto:booking@jender-fewo.de">booking@jender-fewo.de</a> | 04491 / 919262</p>
+        <p style="margin-top: 1rem;">
+            <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutzerklärung</a>
+        </p>
         <p style="margin-top: 1rem; font-size: 0.85rem;">© 2026 Up de Warft. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <!-- JavaScript für Formular-Validierung -->
+    <script>
+        const privacyCheckbox = document.getElementById('privacy-checkbox');
+        const submitBtn = document.getElementById('submit-btn');
+
+        privacyCheckbox.addEventListener('change', function() {
+            submitBtn.disabled = !this.checked;
+        });
+    </script>
 </body>
 </html>
