@@ -547,6 +547,7 @@
                 <li><a href="#ausstattung">Ausstattung</a></li>
                 <li><a href="#lage">Lage</a></li>
                 <li><a href="#preise">Preise</a></li>
+                <li><a href="#kalender">Verfügbarkeit</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
@@ -823,6 +824,32 @@
                     </ul>
                 </div>
             </div>
+        </section>
+        <section id="kalender">
+            <h2>📅 Verfügbarkeit</h2>
+
+            <p style="text-align:center; margin-bottom:2rem;">
+                Hier sehen Sie die aktuellen Belegzeiten unserer Ferienwohnung.
+            </p>
+
+            <div style="max-width:100%; overflow:hidden; display:flex; justify-content:center;">
+                <div id="kalender_iframe_child">
+                    <b>Belegzeitenkalender für Up de Warft – Ferienwohnung Manslagt</b><br />
+                </div>
+            </div>
+
+            <script src="https://ext.travanto.de/js/index.externInclude.js"></script>
+            <script>
+                includeBelegzeitenkalender.width = "100%";
+                includeBelegzeitenkalender.height = 700;
+                includeBelegzeitenkalender.allg_http = 'https://www.travanto.de';
+                includeBelegzeitenkalender.objekt_nr = 36050;
+                includeBelegzeitenkalender.lang = 'de';
+                includeBelegzeitenkalender.objekt_url = 'https://www.travanto.de/ferienwohnungen/krummhoern/36050/up-de-warft-ferienwohnung-manslagt.php';
+                includeBelegzeitenkalender.design = 'responsive';
+                includeBelegzeitenkalender.legendPosition = 'top';
+                includeBelegzeitenkalender.createIframe();
+            </script>
         </section>
 
         <!-- Kontakt -->
