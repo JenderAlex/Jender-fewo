@@ -529,6 +529,44 @@
             max-width: 100%;
             height: auto;
         }
+                /* Kalender Card */
+        .calendar-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Beschreibung */
+        .calendar-info {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* Scroll-Fix */
+        .calendar-wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .calendar-scroll {
+            overflow-x: auto;
+        }
+
+        .calendar-scroll > div {
+            min-width: 800px;
+        }
+
+        /* Hinweis */
+        .calendar-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -828,16 +866,22 @@
         <section id="kalender">
             <h2>📅 Verfügbarkeit</h2>
 
-            <p style="text-align:center; margin-bottom:2rem;">
-                Hier sehen Sie die aktuellen Belegzeiten unserer Ferienwohnung.
-            </p>
+            <div class="calendar-card">
+                <p class="calendar-info">
+                    Prüfen Sie hier direkt die aktuellen Belegzeiten unserer Ferienwohnung.
+                </p>
 
-            <div style="width:100%; overflow-x:auto;">
-                <div style="min-width:800px;">
-                    <div id="kalender_iframe_child">
-                        <b>Belegzeitenkalender für Up de Warft – Ferienwohnung Manslagt</b><br />
+                <div class="calendar-wrapper">
+                    <div class="calendar-scroll">
+                        <div id="kalender_iframe_child">
+                            <b>Belegzeitenkalender für Up de Warft – Ferienwohnung Manslagt</b><br />
+                        </div>
                     </div>
                 </div>
+
+                <p class="calendar-hint">
+                    👉 Auf dem Handy nach rechts wischen, um alle Tage zu sehen
+                </p>
             </div>
 
             <script src="https://ext.travanto.de/js/index.externInclude.js"></script>
