@@ -478,13 +478,64 @@
             font-size: 2rem;
             margin-bottom: 1rem;
         }
+
+        /* Fix gegen seitliches Scrollen */
+        html, body {
+            overflow-x: hidden;
+        }
+
+        /* Burger Menü */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: white;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2c3e50;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        /* Sicherheit für Bilder */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <nav>
-            <div class="logo">Up de Warft - Ferienwohnung in Manslagt</div>
+            <div class="logo">Up de Warft</div>
             <ul class="nav-links">
                 <li><a href="#ueberblick">Überblick</a></li>
                 <li><a href="#galerie">Galerie</a></li>
