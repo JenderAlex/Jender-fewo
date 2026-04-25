@@ -536,7 +536,12 @@
     <header>
         <nav>
             <div class="logo">Up de Warft</div>
-            <ul class="nav-links">
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#ueberblick">Überblick</a></li>
                 <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#ausstattung">Ausstattung</a></li>
@@ -919,6 +924,13 @@
 
         privacyCheckbox.addEventListener('change', function() {
             submitBtn.disabled = !this.checked;
+        });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
         });
     </script>
 </body>
